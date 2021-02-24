@@ -1,0 +1,51 @@
+@import "~@/assets/css/normalize.css";
+
+/*代表html*/
+:root{
+    /*声明变量*/
+    --color-text:#666;
+    --color-height-text:#ff5777;
+    --color-tint:#ff8198;
+    --color-background: #fff;
+    --font-size:14px;
+    --line-height:1.5;
+    --large-size:50px;
+}
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--large-size);/*//使用变量*/
+}
+
+body{
+   font-family:"Microsoft YaHei UI",Arial,"Microsoft JhengHei Light",sans-serif;
+    user-select: none;/*禁止用户在鼠标在页面上选中文字*/
+    background-color: var(--color-background);
+}
+
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clear-fix{
+    zoom: 1;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
